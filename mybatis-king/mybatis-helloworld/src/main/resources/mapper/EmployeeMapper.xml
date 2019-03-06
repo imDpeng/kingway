@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ncpsb.datascience.dpeng.mybatis.helloworld.mapper.EmployeeMapper">
+
+
+    <select id="selectEmployee" resultType="ncpsb.datascience.dpeng.common.model.mybatis.helloworld.Employee">
+        select *
+        from employee
+        where id = #{id}
+    </select>
+
+
+    <select id="selectEmployeeWithParam"
+            resultType="ncpsb.datascience.dpeng.common.model.mybatis.helloworld.Employee">
+        select *
+        from employee
+        where id = #{param1} and last_name = #{lastName}
+    </select>
+
+
+</mapper>
